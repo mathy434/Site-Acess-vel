@@ -22,7 +22,9 @@ const botaoDeAcessibilidade = document.getElementById('botaoacessibilidade');
  botaoDeAcessibilidade.classList.toggle('rotacao-botao');
  opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
  })
- })
+ const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+ botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado);})
+})
 alternaContraste.addEventListener('click', function(){
  document.body.classList.toggle('alto-contraste');
  })
